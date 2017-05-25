@@ -1,3 +1,39 @@
+Entity Categories for KAFE(Korean Access Federation)
+====================================================
+Test under simpleSAMLphp 1.13.12 and 1.14.14. Perhaps it would be working on other version
+
+Installation
+------------
+Just download master.zip and extract it to simplesamlphp/modules/
+
+Configuration
+-------------
+add the following lines to config.php
+
+```
+  48 => array(
+     'class' => 'entitycategories:EntityCategory',
+     'default'  => true,
+     'map' => 'name2oid',
+     'http://refeds.org/category/research-and-scholarship' => array(
+          'displayName',
+          'mail',
+          ...,
+     },
+  ),
+
+```
+
+add the following lines to simplesamlphp/metadata/saml20-sp-remote.php
+```
+  'EntityAttributes' => array(
+      'http://macedir.org/entity-category' => array(
+          'http://refeds.org/category/research-and-scholarship',
+      ),
+  ),
+```
+
+
 Entity Categories
 =================
 
