@@ -1,6 +1,6 @@
 Entity Categories for KAFE(Korean Access Federation)
 ====================================================
-Test under simpleSAMLphp 1.13.12 and 1.14.14. Perhaps it would be working on other version
+Tested under simpleSAMLphp 1.13.12 and 1.14.14. Perhaps it would be working on other version
 
 Installation
 ------------
@@ -24,7 +24,7 @@ add the following lines to config.php
 
 ```
 
-add the following lines to simplesamlphp/metadata/saml20-sp-remote.php
+[For testing purpose] add the following lines to simplesamlphp/metadata/saml20-sp-remote.php
 ```
   'EntityAttributes' => array(
       'http://macedir.org/entity-category' => array(
