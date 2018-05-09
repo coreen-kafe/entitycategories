@@ -123,6 +123,11 @@ class sspmod_entitycategories_Auth_Process_EntityCategory extends SimpleSAML_Aut
 
         $categories = $request['Destination']['EntityAttributes']['http://macedir.org/entity-category'];
 
+        if (!in_array('http://refeds.org/category/research-and-scholarship', $categories)){
+            // there's no r&s category, do nothing
+            return;
+        }
+
 	//var_dump($this->categories);
 	//var_dump($categories);
 	//var_dump($request['Destination']['attributes']);
